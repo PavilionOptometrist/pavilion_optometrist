@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pavilion Optometrist | Book Your Eye Test</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#f7f9fc;color:#333;line-height:1.6;}
+.hero{background:linear-gradient(135deg,#6a4bdb,#e74c3c);color:white;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px;}
+.hero-content{max-width:1200px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+.hero-text h1{font-size:3.5rem;margin-bottom:20px;line-height:1.1;}
+.hero-text p{font-size:1.1rem;margin-bottom:30px;}
+.features{margin-bottom:30px;}
+.features div{margin-bottom:12px;font-size:1rem;}
+.btn-group{display:flex;flex-wrap:wrap;gap:15px;}
+.btn{padding:15px 28px;border:none;border-radius:50px;text-decoration:none;font-weight:600;cursor:pointer;transition:0.3s;display:inline-block;}
+.btn-primary{background:white;color:#e74c3c;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.btn-secondary{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:white;}
+.btn-secondary:hover{background:rgba(255,255,255,0.25);}
+.booking-card{background:white;padding:35px;border-radius:25px;box-shadow:0 15px 40px rgba(0,0,0,0.15);}
+.booking-card h2{color:#222;margin-bottom:10px;}
+.booking-card .subtitle{color:#666;margin-bottom:20px;font-size:0.95rem;}
+.booking-card input,.booking-card select,.booking-card textarea{width:100%;padding:14px;margin-bottom:15px;border:1px solid #ddd;border-radius:12px;font-size:15px;font-family:'Poppins',sans-serif;transition:0.3s;}
+.booking-card input:focus,.booking-card select:focus,.booking-card textarea:focus{outline:2px solid #6a4bdb;border-color:#6a4bdb;}
+.booking-card button{width:100%;padding:16px;border:none;border-radius:12px;background:#25D366;color:white;font-size:16px;font-weight:600;cursor:pointer;transition:0.3s;display:flex;align-items:center;justify-content:center;gap:10px;}
+.booking-card button:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 5px 15px rgba(37,211,102,0.3);}
+.booking-card button:disabled{opacity:0.7;cursor:not-allowed;transform:none;}
+.message{padding:12px;margin:10px 0;border-radius:8px;font-weight:500;display:none;}
+.message.success{display:block;background:#d4edda;color:#155724;border:1px solid #c3e6cb;}
+.message.error{display:block;background:#f8d7da;color:#721c24;border:1px solid #f5c6cb;}
+.section{max-width:1200px;margin:auto;padding:90px 20px;}
+.section-title{text-align:center;margin-bottom:50px;}
+.section-title h2{font-size:2.2rem;color:#222;}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.card{background:white;padding:30px;border-radius:20px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,0.08);transition:0.3s;}
+.card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.12);}
+.card h3{color:#6a4bdb;margin-bottom:10px;}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;}
+.review{background:white;padding:30px;border-radius:20px;box-shadow:0 5px 15px rgba(0,0,0,0.08);color:#333;}
+.cta{background:linear-gradient(135deg,#6a4bdb,#e74c3c);color:white;text-align:center;padding:80px 20px;}
+.cta h2{font-size:2.5rem;margin-bottom:15px;}
+.cta .btn-primary{color:#6a4bdb;}
+.footer{background:#111827;color:white;text-align:center;padding:35px;}
+.whatsapp-float{position:fixed;bottom:30px;right:30px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 5px 20px rgba(37,211,102,0.4);text-decoration:none;transition:0.3s;z-index:1000;}
+.whatsapp-float:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,0.6);}
+@media(max-width:900px){.hero-content{grid-template-columns:1fr;}.hero-text h1{font-size:2.6rem;}}
+@media(max-width:480px){.hero-text h1{font-size:2rem;}.btn-group{flex-direction:column;}.booking-card{padding:20px;}.whatsapp-float{width:50px;height:50px;font-size:24px;bottom:20px;right:20px;}}
+</style>
+</head>
+<body>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/27782292605" class="whatsapp-float" target="_blank">💬</a>
+
+<section class="hero">
+<div class="hero-content">
+<div class="hero-text">
+<h1>Book Your Eye Test Today</h1>
+<p>Experience professional eye care with advanced ZEISS technology at Pavilion Optometrist.</p>
+<div class="features">
+<div>✓ Comprehensive Eye Examinations</div>
+<div>✓ Medical Aids Accepted</div>
+<div>✓ Driver's Licence Eye Tests</div>
+<div>✓ Contact Lens Consultations</div>
+<div>✓ Convenient Pavilion Shopping Centre Location</div>
+</div>
+<div class="btn-group">
+<a href="#booking" class="btn btn-primary">Book Appointment</a>
+<a href="https://wa.me/27782292605" class="btn btn-secondary">💬 WhatsApp Us</a>
+</div>
+</div>
+
+<div class="booking-card" id="booking">
+<h2>📱 Book via WhatsApp</h2>
+<p class="subtitle">Fill in your details and we'll open WhatsApp with your booking request.</p>
+<form id="bookingForm">
+<input type="text" id="name" placeholder="Full Name *" required>
+<input type="tel" id="phone" placeholder="Phone Number *" required>
+<input type="email" id="email" placeholder="Email Address">
+<select id="service" required>
+<option value="">Select Service *</option>
+<option>Comprehensive Eye Test</option>
+<option>Driver's Licence Eye Test</option>
+<option>Contact Lens Consultation</option>
+<option>Children's Eye Care</option>
+<option>Diabetic Eye Screening</option>
+</select>
+<input type="date" id="date" required>
+<select id="time" required>
+<option value="">Preferred Time *</option>
+<option>09:00</option><option>09:30</option>
+<option>10:00</option><option>10:30</option>
+<option>11:00</option><option>11:30</option>
+<option>12:00</option><option>12:30</option>
+<option>13:00</option><option>13:30</option>
+<option>14:00</option><option>14:30</option>
+<option>15:00</option><option>15:30</option>
+<option>16:00</option><option>16:30</option>
+</select>
+<textarea rows="4" id="notes" placeholder="Additional Notes (optional)"></textarea>
+<div id="message" class="message"></div>
+<button type="submit" id="submitBtn">
+💬 Send Booking via WhatsApp
+</button>
+</form>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-title"><h2>Our Services</h2></div>
+<div class="services">
+<div class="card"><h3>Eye Examinations</h3><p>Comprehensive vision and eye health assessments.</p></div>
+<div class="card"><h3>Prescription Glasses</h3><p>Frames and lenses tailored to your needs.</p></div>
+<div class="card"><h3>Contact Lenses</h3><p>Professional fitting and aftercare.</p></div>
+<div class="card"><h3>Driver's Licence Tests</h3><p>Quick and convenient eye screenings.</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="section-title"><h2>What Patients Say</h2></div>
+<div class="reviews">
+<div class="review">⭐⭐⭐⭐⭐<br><br>Excellent service and friendly staff. Highly recommended.</div>
+<div class="review">⭐⭐⭐⭐⭐<br><br>Professional eye test and a fantastic experience from start to finish.</div>
+<div class="review">⭐⭐⭐⭐⭐<br><br>Great selection of frames and outstanding customer care.</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>Ready To See Clearly?</h2>
+<p>Book your appointment with Pavilion Optometrist today.</p>
+<br>
+<a href="#booking" class="btn btn-primary">📱 Book Now</a>
+</section>
+
+<footer class="footer">
+<h3>Pavilion Optometrist</h3>
+<p>Pavilion Shopping Centre • Shop 8b [Inside Checkers Hyper]</p>
+<p>Professional Eye Care You Can Trust</p>
+<p style="margin-top:10px;font-size:0.85rem;opacity:0.7;">📞 Call us: 079 568 9076</p>
+</footer>
+
+<script>
+const form = document.getElementById('bookingForm');
+const submitBtn = document.getElementById('submitBtn');
+const messageEl = document.getElementById('message');
+
+// WhatsApp number (South African format)
+const WHATSAPP_NUMBER = '27782292605'; // Without the + sign
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const service = document.getElementById('service').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const notes = document.getElementById('notes').value.trim();
+    
+    // Validate required fields
+    if (!name || !phone || !service || !date || !time) {
+        showMessage('Please fill in all required fields (*).', 'error');
+        return;
+    }
+    
+    // Format the date nicely
+    const formattedDate = new Date(date + 'T00:00:00').toLocaleDateString('en-ZA', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    
+    // Create WhatsApp message with proper formatting
+    const message = `*📋 NEW APPOINTMENT BOOKING*%0A%0A` +
+        `*👤 Name:* ${name}%0A` +
+        `*📱 Phone:* ${phone}%0A` +
+        `*📧 Email:* ${email || 'Not provided'}%0A` +
+        `*🩺 Service:* ${service}%0A` +
+        `*📅 Date:* ${formattedDate}%0A` +
+        `*🕐 Time:* ${time}%0A` +
+        `*📝 Notes:* ${notes || 'None'}%0A%0A` +
+        `*⏳ Status:* Pending Confirmation%0A` +
+        `*📨 Source:* Website Booking%0A%0A` +
+        `_Please confirm this appointment._`;
+    
+    // Open WhatsApp with the message
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '⏳ Opening WhatsApp...';
+    
+    // Open WhatsApp in a new tab/window
+    window.open(whatsappUrl, '_blank');
+    
+    // Show success message
+    showMessage('✅ Booking sent via WhatsApp! We\'ll confirm your appointment shortly.', 'success');
+    
+    // Reset form after a delay
+    setTimeout(() => {
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '💬 Send Booking via WhatsApp';
+    }, 3000);
+});
+
+function showMessage(text, type) {
+    messageEl.textContent = text;
+    messageEl.className = 'message ' + type;
+    messageEl.style.display = 'block';
+    
+    // Auto-hide after 8 seconds
+    setTimeout(() => {
+        messageEl.style.display = 'none';
+    }, 8000);
+}
+
+// Add phone number formatting (optional)
+document.getElementById('phone').addEventListener('input', function(e) {
+    let value = this.value.replace(/\D/g, '');
+    if (value.length > 10) value = value.slice(0, 10);
+    this.value = value;
+});
+</script>
+</body>
+</html>
